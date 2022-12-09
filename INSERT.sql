@@ -97,3 +97,22 @@ FROM
 	student_mst
 WHERE
 	`name` IS NULL;/* null 값만 데려옴*/
+	
+/*-------------------------------------------------*/
+
+UPDATE student_mst
+SET score = 80
+WHERE `name` = '박준현';
+/*학년이 2학년인 학생들 중에 80 ~ 90 사이 학생들의 점수로 100으로 바꿔라 */
+
+UPDATE student_mst
+SET score = 100
+WHERE student_year = 2 AND score BETWEEN 80 AND 90;
+
+/*-------------------------------------------------*/
+
+DELETE
+FROM
+	student_mst
+WHERE
+	score < 80;
