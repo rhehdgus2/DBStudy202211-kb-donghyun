@@ -10,10 +10,10 @@ DELETE (삭제) - D
 INSERT INTO product_mst
 /* (id, product_name, product_price) 생략가능 */
 VALUES
-(0, '스타벅스 블루 텀블225러', 15000),
-(0, '스타벅스 화이트 머그212컵2', 20000),
-(0, '스타벅스 블랙 머그컵32132', 25000),
-(0, '스타벅스ㅋㅋ', 15000);
+(0, '스타벅스 블루 텀블러', 15000),
+(0, '스타벅스 화이트 머그컵', 20000),
+(0, '스타벅스 블랙 머그컵', 25000),
+(0, '스타벅스', 15000);
 
 SELECT
 	id,
@@ -56,7 +56,7 @@ FROM
 	student_mst
 WHERE
 	/*not student_year = 3,  not : != */
-	`name` LIKE '%수%' AND `name` NOT LIKE '%수'; /*% : 무엇이든 들어가도 상관*/
+	`name` LIKE '%수%'/* AND `name` NOT LIKE '%수'*/; /*% : 무엇이든 들어가도 상관*/
 	
 SELECT
 	id,
